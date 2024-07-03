@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background:url("Kaputama.jpg")no-repeat center center/cover;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: rgba(218, 199, 199, 0.24);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+        }
+
+        .container form div {
+            margin-bottom: 15px;
+        }
+
+        .container form div label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .container form div input,
+        .container form div select,
+        .container form div textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid rgb(44, 21, 21);
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .container form button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            border: none;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .container form button[type="reset"] {
+            background-color: #dc3545;
+            margin-left: 10px;
+        }
+
+        .container form button:hover {
+            background-color: #0056b3;
+        }
+
+        .container .prodi{
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form method="post" action="/" id="formRegister">
+            <div>
+                <label for="username">Username</label>
+                <input type="text" name="username" id="username">
+            </div>
+            <div>
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email">
+            </div>
+            <div>
+                <label for="prodi">Prodi</label>
+                <select class="prodi" name="prodi" id="prodi">
+                    <option value="TI">Teknik Informatika</option>
+                    <option value="SI">Sistem Informasi</option>
+                    <option value="MI">Manajemen Informasi</option>
+                    <option value="KA">Komputerisasi Akuntansi</option>
+                </select>
+            </div>
+            <div>
+                <label for="alamat">Alamat</label>
+                <textarea name="alamat" id="alamat"></textarea>
+            </div>
+            <div>
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" required placeholder="Buat Password">
+            </div>
+            <div>
+                <label for="rpassword">Repeat Password</label>
+                <input type="password" name="rpassword" id="rpassword" required placeholder="Konfirmasi ulang password">
+            </div>
+            <button type="submit" onclick="validasi()">Submit</button>
+            <button type="reset">Reset</button>
+        </form>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
